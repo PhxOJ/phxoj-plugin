@@ -1,0 +1,109 @@
+{% extends "layout/wiki_base.html" %}
+{% block wiki_content %}
+{% set name = handler.domain.ui.name|default(model.system.get('server.name')) %}
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="domain" data-heading>{{ _('Domain') }}</h1>
+  </div>
+<div class="section__body typo">
+  <p>{{_("Each user can create their own domain. For example, a teacher can create a domain for a course and then add questions and students to this domain. Similarly, a domain can be used as a team feature.")}}</p>
+  <p>{{_("By properly configuring roles and their permissions, a domain can be set as public or private.")}}</p>
+  <p>{{_("The default domain is 'system', and users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will navigate back to the 'system' domain from any domain.")}}</p>
+  <p>{{_("Each domain's question bank, discussions, training, and competitions are independent and autonomous.")}}</p>
+</div>
+
+</div>
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="compiler" data-heading>{{ _("Compilers' Version and Parameters") }}</h1>
+  </div>
+  <div class="section__body typo">
+    {% if languages %}
+      <blockquote><ul>
+        {%- for k, v in languages -%}
+          <li>{{ k }} <pre>{{ v }}</pre></li>
+        {%- endfor -%}
+      </ul></blockquote>
+    {% endif %}
+  </div>
+</div>
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="io" data-heading>{{ _('IO') }}</h1>
+  </div>
+  <div class="section__body typo">
+    <p>{{_("Unless otherwise specified, the OJ uses standard input and output (console input and output, screen input andoutput, STD I/O).")}}</p>
+  </div>
+</div>
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="status" data-heading>{{ _('Judge Status') }}</h1>
+  </div>
+  <div class="section__body typo">
+    <ul>
+      <li><span class="record-status--text pending">Waiting</span> {{_("Evaluation - Evaluation request is waiting to be fetched by the judging server.")}}</li>
+      <li><span class="record-status--text progress">Fetched</span> {{_("Evaluation - Evaluation request has been fetched by the judging server and is preparing to start the evaluation.")}}</li>
+      <li><span class="record-status--text progress">Compiling</span> {{_("Evaluation - Compilation in progress.")}}</li>
+      <li><span class="record-status--text progress">Judging</span> {{_("Evaluation - Compilation successful, judging in progress.")}}</li>
+      <li><span class="record-status--text pass">Accepted</span> {{_("Passed - Program output is completely correct.")}}</li>
+      <li><span class="record-status--text fail">Wrong Answer</span> {{_("Failed - Program output does not match the standard answer (excluding trailing spaces and empty lines at the end of files).")}}</li>
+      <li><span class="record-status--text fail">Time Limit Exceeded</span> {{_("Failed - Program runtime exceeds the time limit specified for the problem.")}}</li>
+      <li><span class="record-status--text fail">Memory Limit Exceeded</span> {{_("Failed - Program's memory usage exceeds the limit specified for the problem.")}}</li>
+      <li><span class="record-status--text fail">Runtime Error</span> {{_("Failed - Runtime error in the program (e.g., array out of bounds, division by zero, overflow, stack overflow, invalid pointers, etc.).")}}</li>
+      <li><span class="record-status--text fail">Compile Error</span> {{_("Failed - Compilation error.")}}</li>
+      <li><span class="record-status--text fail">System Error</span> {{_("Error - System error (if you encounter this issue, please provide feedback to administrators).")}}</li>
+      <li><span class="record-status--text ignored">Canceled</span> {{_("Other - Evaluation has been canceled.")}}</li>
+      <li><span class="record-status--text fail">Unknown Error</span> {{_("Other - Unknown error.")}}</li>
+      <li><span class="record-status--text ignored">Ignored</span> {{_("Other - Ignored.")}}</li>
+    </ul>
+  </div>
+</div>
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="ce" data-heading>{{ _('Compile Error') }}</h1>
+  </div>
+
+  <div class="section__body typo">
+    <p>{{_("There may be the following situations")}}</p>
+    <blockquote>
+      <ul>
+        <li>{{_("1. Selecting the wrong programming language during submission")}}</li>
+        <li>{{_("2. Not using 'Main' as the main class name in Java")}}</li>
+        <li>{{_("3. For C/C++: see below")}}</li>
+        <li>{{_("4. General compilation errors")}}</li>
+      </ul>
+    </blockquote>
+
+    <blockquote class="warn">
+      <p>{{_("Special reminders for C/C++ participants")}}</p>
+      <ul>
+        <li>{{_("1. __int64 should be written as long long in GNU C++")}}</li>
+        <li>{{_("2. The return value of main() must be defined as int, not void")}}</li>
+        <li>{{_("3. The index variable i in the for statement will become invalid after statements like 'for (int i = 0...) {...}'")}}</li>
+        <li>{{_("4. itoa is not a universal ANSI function (not available in standard C/C++)")}}</li>
+        <li>{{_("5. Using %lf format in printf is incorrect")}}</li>
+      </ul>
+    </blockquote>
+  </div>
+</div>
+<div class="section" data-heading-extract-to="#menu-item-wiki_help">
+  <div class="section__header">
+    <h1 class="section__title" id="markdown" data-heading>{{ _('Markdown') }}</h1>
+  </div>
+  <div class="section__body typo">
+    <p>Hydro 的 Markdown 区域使用 <a href="http://commonmark.org/help/">CommonMark</a> 语法，并扩展了以下功能：</p>
+    <ul>
+    <li>基于 <a href="https://onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">Katex</a> 语法的数学公式支持。</li>
+    <li>使用 <code>@[](/user/uid)</code> 提及用户。</li>
+    <li>使用 <code>==text==</code> 高亮文本。</li>
+    <li>使用 <code>![alt](url =100x100)</code> 设置嵌入图片的大小。</li>
+    <li>使用 <code>@[video](https://.../a.mp4)</code> 嵌入视频文件。</li>
+    <li>使用 <code>@[bilibili](BVxxx)</code> 嵌入站外视频。</li>
+    <li>使用 <code>@[pdf](https://.../a.pdf)</code> 嵌入 PDF 文件。</li>
+    <li>在题目/比赛/作业/训练中，可使用 <code>file://文件名</code> 的链接格式引用对应的附件。（推荐）</li>
+    <li>支持使用一部分 HTML 标签。</li>
+    </ul>  
+  </div>
+</div>
+
+{% endblock %}
