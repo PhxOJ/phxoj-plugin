@@ -1087,7 +1087,7 @@ Error - System error (if you encounter this issue, please provide feedback to ad
 Other - Evaluation has been canceled.: 其他：评测被取消
 Other - Unknown error.: 其他：未知错误
 Other - Ignored.: 其他：被忽略
-Few common reasons for a compile error are as follows: 可能有以下情况：
+'Few common reasons for a compile error are as follows:': 可能有以下情况：
 1. Incorrect selection of programming language for the submission: 1. 递交时选错了编程语言
 2. Not using 'Main' as the main class name in Java: 2. Java 的主类名没有使用 "Main"
 3. Specific issues in C/C++ (see below): 3. 对于 C/C++：见下
