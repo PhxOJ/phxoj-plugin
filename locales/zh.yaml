@@ -1069,11 +1069,10 @@ Your Device: 你的设备
 Your permission: 您的权限
 Your role: 您的角色
 
-Each user can create their own domain. For example, a teacher can create a domain for a course and then add questions and students to this domain. Similarly, a domain can be used as a team feature.: 每个用户可以创建自己的域。比如，老师可以为课程创建一个域，然后把题目和学生加入到此域中。再如，可以把域作为团队功能。
-By properly configuring roles and their permissions, a domain can be set as public or private.: 通过合理的设置角色及其权限，可以把域设为公开或私有。
-The default domain is 'system', and users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will navigate back to the 'system' domain from any domain.: 默认域为 system，用户直接访问域名就会访问此域，点击 PhxOJ Logo 会从任意域跳转回 system 域。
-Each domain's question bank, discussions, training, and competitions are independent and autonomous.: 每个域的题库、讨论、训练以及比赛是独立且自治的。
-Unless otherwise specified, the OJ uses standard input and output (console input and output, screen input andoutput, STD I/O).: 若无特殊说明，Hydro 使用标准输入输出（控制台输入输出，屏幕输入输出，STD I/O）。
+Few users with proper permissions can create their own domain. For example, teachers can create a domain for a course and add problemsets along with enroll students to this domain. Domain can also be used for teams.: 每个用户可以创建自己的域。比如，老师可以为课程创建一个域，然后把题目和学生加入到此域中。再如，可以把域作为团队功能。通过合理的设置角色及其权限，可以把域设为公开或私有。
+The default domain is named 'system'. Users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will also navigate back to the 'system' domain.: 默认域为 system，用户直接访问域名就会访问此域，点击 PhxOJ Logo 会从任意域跳转回 system 域。
+It is important to note that the question bank, discussions, training, and contests are all independent and autonomous.: 每个域的题库、讨论、训练以及比赛是独立且自治的。
+Unless otherwise specified, the grader uses standard input and output methods, including console input and output, screen input and output, that are commonly referred to as STD I/O.: 若无特殊说明，Hydro 使用标准输入输出（控制台输入输出，屏幕输入输出，STD I/O）。
 Evaluation - Evaluation request is waiting to be fetched by the judging server.: 评测：评测请求正在等待被评测机抓取
 Evaluation - Evaluation request has been fetched by the judging server and is preparing to start the evaluation.: 评测：评测请求已被评测机抓取，正在准备开始评测
 Evaluation - Compilation in progress.: 评测：正在编译中
@@ -1088,31 +1087,14 @@ Error - System error (if you encounter this issue, please provide feedback to ad
 Other - Evaluation has been canceled.: 其他：评测被取消
 Other - Unknown error.: 其他：未知错误
 Other - Ignored.: 其他：被忽略
-There may be the following situations: 可能有以下情况：
-1. Selecting the wrong programming language during submission: 1. 递交时选错了编程语言
+Few common reasons for a compile error are as follows: 可能有以下情况：
+1. Incorrect selection of programming language for the submission: 1. 递交时选错了编程语言
 2. Not using 'Main' as the main class name in Java: 2. Java 的主类名没有使用 "Main"
-3. For C/C++ - see below: 3. 对于 C/C++：见下
+3. Specific issues in C/C++ (see below): 3. 对于 C/C++：见下
 4. General compilation errors: 4. 一般性的编译错误
-Special reminders for C/C++ participants: 对 C/C++ 选手的特别提醒：
-1. __int64 should be written as long long in GNU C++: 1. __int64 在 GNU C++ 中应写成 long long 类型
-2. The return value of main() must be defined as int, not void: 2. main() 返回值必须定义为 int ，而不是 void
-3. The index variable i in the for statement will become invalid after statements like 'for (int i = 0...) {...}': 3. for 语句中的指标变量 i 将会在如"for (int i = 0...) {...}"语句之后变为无效
-4. itoa is not a universal ANSI function (not available in standard C/C++): 4. itoa 不是一个通用 ANSI 函数（标准 C/C++ 中无此函数）
-5. Using %lf format in printf is incorrect: 5. printf 中使用 %lf 格式是不正确的
-
-# 6 January 2024 updates
-Few users with proper permissions can create their own domain. For example, teachers can create a domain for a course and add problemsets along with enroll students to this domain. Domain can also be used for teams.:
-The default domain is named 'system'. Users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will also navigate back to the 'system' domain.:
-It is important to note that the question bank, discussions, training, and contests are all independent and autonomous.:
-Unless otherwise specified, the grader uses standard input and output methods, including console input and output, screen input and output, that are commonly referred to as STD I/O.:
-Few common reasons for a compile error are as follows:
-1. Incorrect selection of programming language for the submission:
-2. Not using 'Main' as the main class name in Java:
-3. Specific issues in C/C++ (see below):
-4. General compilation errors:
-Important notes for C/C++ users:
-1. '__int64' should be written as 'long long' in GNU C++:
-2. The return type of the 'main()' function must be 'int', not 'void'.:
-3. In 'for' statements like 'for (int i = 0; ...) {...}', the index variable 'i' becomes invalid after the loop.:
-4. 'itoa' is not a standard ANSI function; hence, is not available in standard C/C++ (same goes with other non-standard ANSI functions).:
-5. Using the '%lf' format specifier in 'printf' is incorrect.:
+Important notes for C/C++ users: 对 C/C++ 选手的特别提醒：
+1. '__int64' should be written as 'long long' in GNU C++: 1. __int64 在 GNU C++ 中应写成 long long 类型
+2. The return type of the 'main()' function must be 'int', not 'void'.: 2. main() 返回值必须定义为 int ，而不是 void
+3. In 'for' statements like 'for (int i = 0; ...) {...}', the index variable 'i' becomes invalid after the loop.': 3. for 语句中的指标变量 i 将会在如"for (int i = 0...) {...}"语句之后变为无效
+4. 'itoa' is not a standard ANSI function; hence, is not available in standard C/C++ (same goes with other non-standard ANSI functions).: 4. itoa 不是一个通用 ANSI 函数（标准 C/C++ 中无此函数）
+5. Using the '%lf' format specifier in 'printf' is incorrect.: 5. printf 中使用 %lf 格式是不正确的
