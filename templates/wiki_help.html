@@ -6,19 +6,13 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
   </div>
   <div class="section__body typo">
     <p>
-      {{_("Few users with proper permissions can create their own domain. For
-      example, teachers can create a domain for a course and add problemsets
-      along with enroll students to this domain. Domain can also be used for
-      teams.")}}
+      {{_("Few users with proper permissions can create their own domain. For example, teachers can create a domain for a course and add problemsets along with enroll students to this domain. Domain can also be used for teams.")}}
     </p>
     <p>
-      {{_("The default domain is named 'system'. Users can directly access the
-      domain name to access this domain. Clicking the PhxOJ Logo will also
-      navigate back to the 'system' domain.")}}
+      {{_("The default domain is named 'system'. Users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will also navigate back to the 'system' domain.")}}
     </p>
     <p>
-      {{_("It is important to note that the question bank, discussions,
-      training, and contests are all independent and autonomous.")}}
+      {{_("It is important to note that the question bank, discussions, training, and contests are all independent and autonomous.")}}
     </p>
   </div>
 </div>
@@ -51,9 +45,7 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
   </div>
   <div class="section__body typo">
     <p>
-      {{_("Unless otherwise specified, the grader uses standard input and output
-      methods, including console input and output, screen input and output, that
-      are commonly referred to as STD I/O.")}}
+      {{_("Unless otherwise specified, the grader uses standard input and output methods, including console input and output, screen input and output, that are commonly referred to as STD I/O.")}}
     </p>
   </div>
 </div>
@@ -66,13 +58,11 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
   <div class="section__body typo">
     <ul>
       <li>
-        <span class="record-status--text pending">Waiting</span> {{_("Evaluation
-        - Evaluation request is waiting to be fetched by the judging server.")}}
+        <span class="record-status--text pending">Waiting</span> {{_("Evaluation - Evaluation request is waiting to be fetched by the judging server.")}}
       </li>
       <li>
         <span class="record-status--text progress">Fetched</span>
-        {{_("Evaluation - Evaluation request has been fetched by the judging
-        server and is preparing to start the evaluation.")}}
+        {{_("Evaluation - Evaluation request has been fetched by the judging server and is preparing to start the evaluation.")}}
       </li>
       <li>
         <span class="record-status--text progress">Compiling</span>
@@ -83,49 +73,36 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
         {{_("Evaluation - Compilation successful, judging in progress.")}}
       </li>
       <li>
-        <span class="record-status--text pass">Accepted</span> {{_("Passed -
-        Program output is completely correct.")}}
+        <span class="record-status--text pass">Accepted</span> {{_("Passed - Program output is completely correct.")}}
       </li>
       <li>
-        <span class="record-status--text fail">Wrong Answer</span> {{_("Failed -
-        Program output does not match the standard answer (excluding trailing
-        spaces and empty lines at the end of files).")}}
+        <span class="record-status--text fail">Wrong Answer</span> {{_("Failed - Program output does not match the standard answer (excluding trailing spaces and empty lines at the end of files).")}}
       </li>
       <li>
         <span class="record-status--text fail">Time Limit Exceeded</span>
-        {{_("Failed - Program runtime exceeds the time limit specified for the
-        problem.")}}
+        {{_("Failed - Program runtime exceeds the time limit specified for the problem.")}}
       </li>
       <li>
         <span class="record-status--text fail">Memory Limit Exceeded</span>
-        {{_("Failed - Program's memory usage exceeds the limit specified for the
-        problem.")}}
+        {{_("Failed - Program's memory usage exceeds the limit specified for the problem.")}}
       </li>
       <li>
-        <span class="record-status--text fail">Runtime Error</span> {{_("Failed
-        - Runtime error in the program (e.g., array out of bounds, division by
-        zero, overflow, stack overflow, invalid pointers, etc.).")}}
+        <span class="record-status--text fail">Runtime Error</span> {{_("Failed - Runtime error in the program (e.g., array out of bounds, division by zero, overflow, stack overflow, invalid pointers, etc.).")}}
       </li>
       <li>
-        <span class="record-status--text fail">Compile Error</span> {{_("Failed
-        - Compilation error.")}}
+        <span class="record-status--text fail">Compile Error</span> {{_("Failed - Compilation error.")}}
       </li>
       <li>
-        <span class="record-status--text fail">System Error</span> {{_("Error -
-        System error (if you encounter this issue, please provide feedback to
-        administrators).")}}
+        <span class="record-status--text fail">System Error</span> {{_("Error - System error (if you encounter this issue, please provide feedback to administrators).")}}
       </li>
       <li>
-        <span class="record-status--text ignored">Canceled</span> {{_("Other -
-        Evaluation has been canceled.")}}
+        <span class="record-status--text ignored">Canceled</span> {{_("Other - Evaluation has been canceled.")}}
       </li>
       <li>
-        <span class="record-status--text fail">Unknown Error</span> {{_("Other -
-        Unknown error.")}}
+        <span class="record-status--text fail">Unknown Error</span> {{_("Other - Unknown error.")}}
       </li>
       <li>
-        <span class="record-status--text ignored">Ignored</span> {{_("Other -
-        Ignored.")}}
+        <span class="record-status--text ignored">Ignored</span> {{_("Other - Ignored.")}}
       </li>
     </ul>
   </div>
@@ -142,8 +119,7 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
     <blockquote>
       <ul>
         <li>
-          {{_("1. Incorrect selection of programming language for the
-          submission")}}
+          {{_("1. Incorrect selection of programming language for the submission")}}
         </li>
         <li>{{_("2. Not using 'Main' as the main class name in Java")}}</li>
         <li>{{_("3. Specific issues in C/C++ (see below)")}}</li>
@@ -158,17 +134,13 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
           {{_("1. '__int64' should be written as 'long long' in GNU C++")}}
         </li>
         <li>
-          {{_("2. The return type of the 'main()' function must be 'int', not
-          'void'.")}}
+          {{_("2. The return type of the 'main()' function must be 'int', not void'.")}}
         </li>
         <li>
-          {{_("3. In 'for' statements like 'for (int i = 0; ...) {...}', the
-          index variable 'i' becomes invalid after the loop.")}}
+          {{_("3. In 'for' statements like 'for (int i = 0; ...) {...}', the index variable 'i' becomes invalid after the loop.")}}
         </li>
         <li>
-          {{_("4. 'itoa' is not a standard ANSI function; hence, is not
-          available in standard C/C++ (same goes with other non-standard ANSI
-          functions).")}}
+          {{_("4. 'itoa' is not a standard ANSI function; hence, is not available in standard C/C++ (same goes with other non-standard ANSI functions).")}}
         </li>
         <li>
           {{_("5. Using the '%lf' format specifier in 'printf' is incorrect.")}}
