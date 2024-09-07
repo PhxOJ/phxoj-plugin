@@ -23,18 +23,9 @@ handler.domain.ui.name|default(model.system.get('server.name')) %}
     </h1>
   </div>
   <div class="section__body typo">
-    {% if languages %}
-    <blockquote>
-      <ul>
-        {%- for k, v in languages -%}
-        <li>
-          {{ k }}
-          <pre>{{ v }}</pre>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </blockquote>
-    {% endif %}
+    <p>
+      {{ _("See status for details") }} <a href="/status"> link</a>.
+    </p>
   </div>
 </div>
 <div class="section" data-heading-extract-to="#menu-item-wiki_help">

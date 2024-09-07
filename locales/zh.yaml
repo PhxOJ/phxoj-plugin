@@ -1098,3 +1098,4 @@ Important notes for C/C++ users: 对 C/C++ 选手的特别提醒：
 3. In 'for' statements like 'for (int i = 0; ...) {...}', the index variable 'i' becomes invalid after the loop.': 3. for 语句中的指标变量 i 将会在如"for (int i = 0...) {...}"语句之后变为无效
 4. 'itoa' is not a standard ANSI function; hence, is not available in standard C/C++ (same goes with other non-standard ANSI functions).: 4. itoa 不是一个通用 ANSI 函数（标准 C/C++ 中无此函数）
 5. Using the '%lf' format specifier in 'printf' is incorrect.: 5. printf 中使用 %lf 格式是不正确的
+See status for details: 查看状态以获取更多信息
