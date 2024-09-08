@@ -1070,7 +1070,7 @@ Your permission: 您的权限
 Your role: 您的角色
 
 Few users with proper permissions can create their own domain. For example, teachers can create a domain for a course and add problemsets along with enroll students to this domain. Domain can also be used for teams.: 每个用户可以创建自己的域。比如，老师可以为课程创建一个域，然后把题目和学生加入到此域中。再如，可以把域作为团队功能。通过合理的设置角色及其权限，可以把域设为公开或私有。
-The default domain is named 'system'. Users can directly access the domain name to access this domain. Clicking the PhxOJ Logo will also navigate back to the 'system' domain.: 默认域为 system，用户直接访问域名就会访问此域，点击 PhxOJ Logo 会从任意域跳转回 system 域。
+The default domain is named 'Main Site'. Users can directly access the domain name to access this domain. Clicking the CUHK-Shenzhen Online Judge Logo will also navigate back to the 'Main Site' domain.: 默认域为 Main Site，用户直接访问域名就会访问此域，点击 CUHK-Shenzhen Logo 会从任意域跳转回 Main Site 域。
 It is important to note that the question bank, discussions, training, and contests are all independent and autonomous.: 每个域的题库、讨论、训练以及比赛是独立且自治的。
 Unless otherwise specified, the grader uses standard input and output methods, including console input and output, screen input and output, that are commonly referred to as STD I/O.: 若无特殊说明，Hydro 使用标准输入输出（控制台输入输出，屏幕输入输出，STD I/O）。
 Evaluation - Evaluation request is waiting to be fetched by the judging server.: 评测：评测请求正在等待被评测机抓取
